@@ -15,11 +15,11 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: "true"
 
   hosts:
-    - host: prod.kathleen-veselova.us
+    - host: prodnodejs.kathleen-veselova.us
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - secretName: nodejs-prod-tls
       hosts:
-        - prod.kathleen-veselova.us
+        - prodnodejs.kathleen-veselova.us

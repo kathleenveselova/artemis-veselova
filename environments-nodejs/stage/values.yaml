@@ -15,11 +15,11 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: "true"
 
   hosts:
-    - host: stage.kathleen-veselova.us
+    - host: stagenodejs.kathleen-veselova.us
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - secretName: nodejs-stage-tls
       hosts:
-        - stage.kathleen-veselova.us
+        - stagenodejs.kathleen-veselova.us

@@ -15,11 +15,11 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: "true"
 
   hosts:
-    - host: qaenv.kathleen-veselova.us
+    - host: qa.kathleen-veselova.us
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - secretName: artemis-qa-tls
       hosts:
-        - qaenv.kathleen-veselova.us
+        - qa.kathleen-veselova.us

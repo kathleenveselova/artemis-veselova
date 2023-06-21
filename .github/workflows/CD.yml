@@ -1,7 +1,7 @@
 env:
   repo:         "https://github.com/farrukh90/artemis.git"
 <<<<<<< HEAD
-  app_version:  "7.0.0"
+  app_version:  "9.0.0"
 =======
   app_version:  "9.0.0"
 >>>>>>> 6ce38bc047700e94aad8fc62c93cfd2d47365ab3

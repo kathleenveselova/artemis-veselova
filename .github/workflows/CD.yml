@@ -1,7 +1,7 @@
 env:
   repo:         "https://github.com/farrukh90/artemis.git"
-  app_version:  "2.0.0"
-  project_id:   "csubrsnzorjkvdca"
+  app_version:  "7.0.0"
+  project_id:   "terraform-katishka-project"
   repo_region:  "us-central1"
   app_name:     "artemis"
 
@@ -18,6 +18,8 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -67,11 +69,11 @@ jobs:
         run: gcloud version 
 
 
-
-      - name: Authenticate to Google account
-        run: |
-          gcloud auth activate-service-account --key-file="service-account.json"
-          gcloud config set project ${{ env.project_id }}
+      - id: 'auth'
+        name: Authenticate to Google account
+        uses: 'google-github-actions/auth@v0'
+        with: 
+          credentials_json: '${{ secrets.SERVICE_ACCOUNT }}'
 
 
 
@@ -87,4 +89,3 @@ jobs:
         working-directory: ${{ env.app_name }}
         run: |
           docker push ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.app_name }}/${{ env.app_name }}:${{ env.app_version }}  
-

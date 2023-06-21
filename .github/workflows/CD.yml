@@ -1,7 +1,7 @@
 env:
   repo:         "https://github.com/farrukh90/artemis.git"
   app_version:  "7.0.0"
-  project_id:   "evident-apricot-388703"
+  project_id:   "terraform-katishka-project"
   repo_region:  "us-central1"
   app_name:     "artemis"
 

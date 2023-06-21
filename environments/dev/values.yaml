@@ -15,11 +15,11 @@ ingress:
     acme.cert-manager.io/http01-edit-in-place: "true"
 
   hosts:
-    - host: mydev.kathleen-veselova.us
+    - host: dev.kathleen-veselova.us
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - secretName: artemis-dev-tls
       hosts:
-        - mydev.kathleen-veselova.us
+        - dev.kathleen-veselova.us
